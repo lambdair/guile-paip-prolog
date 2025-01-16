@@ -27,9 +27,9 @@
 (test-end "unify")
 
 
-(test-begin "unifier")
-(test-equal '(a a a) (unifier '(?x ?y a) '(?y ?x ?x)))
+(test-begin "apply-unifier")
+(test-equal '(a a a) (apply-unifier '(?x ?y a) '(?y ?x ?x)))
 (test-equal '((?a * 5 ^ 2) + (4 * 5) + 3)
-             (unifier '((?a * ?x ^ 2) + (?b * ?x) + ?c)
+             (apply-unifier '((?a * ?x ^ 2) + (?b * ?x) + ?c)
 	              '(?z + (4 * 5) + 3)))
-(test-end "unifier")
+(test-end "apply-unifier")

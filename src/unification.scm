@@ -65,6 +65,6 @@
 	     (unify (car x) (car y) bindings)))
      (else fail))))
 
-(define (unifier x y)
+(define (apply-unifier x y)
   "Return someting that unifies with both x and y (or fail)."
   (subst-bindings (unify x y) x))
